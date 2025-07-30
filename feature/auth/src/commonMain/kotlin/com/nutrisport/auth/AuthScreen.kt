@@ -8,11 +8,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.mmk.kmpauth.firebase.google.GoogleButtonUiContainerFirebase
 import com.nutrisport.auth.component.GoogleButton
 import com.nutrisport.shared.Alpha
 import com.nutrisport.shared.BebasNeueFontFamily
@@ -25,6 +30,7 @@ import rememberMessageBarState
 @Composable
 fun AuthScreen() {
     val messageBarState = rememberMessageBarState()
+    var loadingState by remember { mutableStateOf(false) }
 
     Scaffold { padding ->
         ContentWithMessageBar(
@@ -62,10 +68,28 @@ fun AuthScreen() {
                         color = TextPrimary
                     )
                 }
-                GoogleButton(
-                    loading = false,
-                    onClick = {}
-                )
+                GoogleButtonUiContainerFirebase(
+                    linkAccount = false,
+                    onResult = { result ->
+                        result.onSuccess {
+                            loadingState = false
+                        }.onFailure { error ->
+                            if(error.message?.contains("A network error") == true) {
+                                messageBarState.addError("No Internet Connection")
+                            } else {
+                                messageBarState.addError(error.message.toString())
+                            }
+                            loadingState = false
+                        }
+                    }
+                ) {
+                    GoogleButton(
+                        loading = loadingState,
+                        onClick = {
+                            this@GoogleButtonUiContainerFirebase.onClick()
+                        }
+                    )
+                }
             }
         }
     }

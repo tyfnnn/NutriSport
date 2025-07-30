@@ -9,7 +9,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -17,7 +16,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.SegmentedButtonDefaults.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,14 +31,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
 import com.nutrisport.shared.FontSize
-import com.nutrisport.shared.Gray
-import com.nutrisport.shared.GrayDarker
 import com.nutrisport.shared.IconSecondary
 import com.nutrisport.shared.Resources
-import com.nutrisport.shared.Surface
+import com.nutrisport.shared.SurfaceDarker
+import com.nutrisport.shared.SurfaceLighter
 import com.nutrisport.shared.TextPrimary
 import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.Resource
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -51,8 +47,8 @@ fun GoogleButton(
     secondaryText: String = "Please wait...",
     icon: DrawableResource = Resources.Image.GoogleLogo,
     shape: Shape = RoundedCornerShape(99.dp),
-    backgroundColor: Color = Gray,
-    borderColor: Color = GrayDarker,
+    backgroundColor: Color = SurfaceLighter,
+    borderColor: Color = SurfaceDarker,
     progressIndicatorColor: Color = IconSecondary,
     onClick: () -> Unit,
 ) {
