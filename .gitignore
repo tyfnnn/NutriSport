@@ -16,7 +16,18 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-Constants.kt
-GoogleService-Info.plist
-Info.plist
-google-services.json
+
+# Sensitive configuration files
+**/GoogleService-Info.plist
+**/google-services.json
+**/Constants.kt
+**/Info.plist
+
+# Firebase
+.firebase/
+**/GoogleService-Info.plist
+**/google-services.json
+
+# iOS
+*.xcuserstate
+*.xcworkspace/xcuserdata/
