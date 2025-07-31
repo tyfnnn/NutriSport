@@ -19,16 +19,16 @@
 		8263876C2E3A49E0008C20B7 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8263876B2E3A49E0008C20B7 /* FirebaseInAppMessaging-Beta */; };
 		8263876E2E3A49E0008C20B7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8263876D2E3A49E0008C20B7 /* FirebaseMessaging */; };
 		826387702E3A49E0008C20B7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8263876F2E3A49E0008C20B7 /* FirebaseStorage */; };
-		82A214F22E3A5C4700FB5AE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A214F12E3A5C4700FB5AE6 /* GoogleService-Info.plist */; };
+		82FF87CA2E3B578B003AFDC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82FF87C92E3B578B003AFDC4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		82A214F12E3A5C4700FB5AE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82FF87C92E3B578B003AFDC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9DA97B12DC1472C00A4DA20 /* NutriSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */ = {
+		82FF87CD2E3B58A7003AFDC4 /* Exceptions for "iosApp" folder in "iosApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -41,7 +41,7 @@
 		B9DA97B32DC1472C00A4DA20 /* iosApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */,
+				82FF87CD2E3B58A7003AFDC4 /* Exceptions for "iosApp" folder in "iosApp" target */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -79,10 +79,10 @@
 		B9DA97A82DC1472C00A4DA20 = {
 			isa = PBXGroup;
 			children = (
-				82A214F12E3A5C4700FB5AE6 /* GoogleService-Info.plist */,
 				B9DA98002DC14AA900A4DA20 /* Configuration */,
 				B9DA97B32DC1472C00A4DA20 /* iosApp */,
 				B9DA97B22DC1472C00A4DA20 /* Products */,
+				82FF87C92E3B578B003AFDC4 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,7 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82A214F22E3A5C4700FB5AE6 /* GoogleService-Info.plist in Resources */,
+				82FF87CA2E3B578B003AFDC4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
