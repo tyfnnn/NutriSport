@@ -19,3 +19,4 @@ captures
 Constants.kt
 GoogleService-Info.plist
 Info.plist
+google-services.json
